@@ -1,41 +1,47 @@
 package server;
 
+import model.Product;
 import model.User;
+import persistence.IProductRepository;
 import persistence.IUserRepository;
 import services.IObserver;
 import services.IService;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class ServicesImpl implements IService {
     private IUserRepository userRepository;
+    private IProductRepository productRepository;
     private Map<String, IObserver> loggedClients;
 
     private final int defaultThreadsNo=5;
 
-    public ServicesImpl(IUserRepository uRepo) {
+    public ServicesImpl(IUserRepository uRepo, IProductRepository pRepo) {
 
         userRepository = uRepo;
-        loggedClients=new ConcurrentHashMap<>();;
+        productRepository = pRepo;
+        loggedClients=new ConcurrentHashMap<>();
     }
 
     @Override
     public synchronized void login(User user, IObserver client) throws Exception {
         User userR=userRepository.findByUsername(user.getUsername());
-        if (userR!=null){
-            if(loggedClients.get(user.getUsername())!=null)
-                throw new Exception("User already logged in.");
-            System.out.println(user);
-            try{
-            loggedClients.put(userR.getUsername(), client);}
-            catch(Exception ex){
-                System.out.println(ex);
+        if (userR!=null)
+            if(userR.getPassword().equals(user.getPassword())){
+                if(loggedClients.get(user.getUsername())!=null)
+                    throw new Exception("User already logged in.");
+                System.out.println(user);
+                try{
+                loggedClients.put(userR.getUsername(), client);}
+                catch(Exception ex){
+                    System.out.println(ex);
+                }
+                System.out.println("server");
             }
-            System.out.println("server");
-        }else
+            else
+                throw new Exception("Username or password incorrect!");
+        else
             throw new Exception("Authentication failed.");
 
     }
@@ -45,5 +51,10 @@ public class ServicesImpl implements IService {
         IObserver localClient = loggedClients.remove(user.getUsername());
         if (localClient==null)
             throw new Exception("User " + user.getUsername() + " is not logged in.");
+    }
+
+    @Override
+    public Iterable<Product> findAllProducts() {
+        return productRepository.findAll();
     }
 }

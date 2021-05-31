@@ -4,9 +4,6 @@ import model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import persistence.IUserRepository;
 
 import java.util.List;
@@ -15,8 +12,8 @@ import java.util.List;
 public class UserRepositoryORM implements IUserRepository {
     private SessionFactory sessionFactory;
 
-    public UserRepositoryORM(SessionCreator session) {
-        this.sessionFactory = session.getSessionFactory();
+    public UserRepositoryORM() {
+        this.sessionFactory = SessionCreator.getSessionFactory();
     }
 
     @Override
@@ -61,11 +58,10 @@ public class UserRepositoryORM implements IUserRepository {
             Transaction tx = null;
             try {
                 tx = session.beginTransaction();
-                List<User> users = session.createQuery("FROM User WHERE username = :username", User.class)
+                System.out.println("Searching for user " + username);
+                user = session.createQuery("FROM User WHERE username = :username", User.class)
                         .setParameter("username", username)
-                        .list();
-                if(users.size()>0)
-                user = users.get(0);
+                        .list().get(0);
                 tx.commit();
             } catch (RuntimeException ex) {
                 if (tx != null)

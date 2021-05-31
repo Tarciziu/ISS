@@ -8,12 +8,15 @@
     <bean id="session" class="persistence.repository.SessionCreator"/>
 
     <bean id="userRepo" class="persistence.repository.UserRepositoryORM">
-        <constructor-arg ref="session"/>
+    </bean>
+
+    <bean id="productRepo" class="persistence.repository.ProductRepositoryORM">
     </bean>
 
 
     <bean id="service" class="server.ServicesImpl">
         <constructor-arg ref="userRepo"/>
+        <constructor-arg ref="productRepo"/>
     </bean>
 
     <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
