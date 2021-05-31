@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project (':Model')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    compile 'org.hibernate:hibernate-core:5.4.30.Final'
+    runtime group: 'org.xerial', name: 'sqlite-jdbc', version: '3.34.0'
+}
+
+test {
+    useJUnitPlatform()
+}

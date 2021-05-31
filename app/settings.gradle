@@ -1,0 +1,6 @@
+rootProject.name = 'app'
+include 'Model'
+include 'Persistence'
+include 'Services'
+include 'Server'
+
