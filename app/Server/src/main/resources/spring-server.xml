@@ -13,10 +13,14 @@
     <bean id="productRepo" class="persistence.repository.ProductRepositoryORM">
     </bean>
 
+    <bean id="orderRepo" class="persistence.repository.OrderRepositoryORM">
+    </bean>
+
 
     <bean id="service" class="server.ServicesImpl">
         <constructor-arg ref="userRepo"/>
         <constructor-arg ref="productRepo"/>
+        <constructor-arg ref="orderRepo"/>
     </bean>
 
     <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
