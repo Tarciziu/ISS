@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.ModifyOrderWindowController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Spinner fx:id="numberSpinner" layoutX="150.0" layoutY="106.0" />
+        <Label alignment="CENTER" layoutX="69.0" layoutY="70.0" prefHeight="31.0" prefWidth="71.0" text="Product:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="productName" layoutX="150.0" layoutY="70.0" prefHeight="31.0" prefWidth="261.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="135.0" prefHeight="31.0" prefWidth="71.0" text="Price:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="totalPrice" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="135.0" prefHeight="31.0" prefWidth="71.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="103.0" prefHeight="31.0" prefWidth="71.0" text="Pieces:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="modifyOrderButton" onAction="#handleModifyOrder" layoutX="166.0" layoutY="240.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="117.0" text="Modify order">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <TextField fx:id="buyerTextField" layoutX="150.0" layoutY="169.0" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="166.0" prefHeight="31.0" prefWidth="71.0" text="Buyer:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

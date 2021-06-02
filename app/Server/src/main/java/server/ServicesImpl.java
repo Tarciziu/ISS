@@ -88,4 +88,22 @@ public class ServicesImpl implements IService {
         executor.shutdown();
     }
 
+    @Override
+    public void updateOrder(Order order) {
+        orderRepository.update(order);
+        Product product = order.getProduct();
+        productRepository.update(product);
+        ExecutorService executor= Executors.newFixedThreadPool(defaultThreadsNo);
+        for(IObserver obs:loggedClients.values()){
+            executor.execute(()-> {
+                try {
+                    obs.notifyNewOrder(order);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+        }
+        executor.shutdown();
+    }
+
 }

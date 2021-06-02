@@ -42,11 +42,13 @@ public class OrderRepositoryORM implements IOrderRepository {
 
     @Override
     public void update(Order order) {
+        OrderDTO orderDTO = new OrderDTO(order.getProduct().getId(),order.getQuantity(), order.getBuyer());
+        orderDTO.setId(order.getId());
         try(Session session = sessionFactory.openSession()){
             Transaction tx=null;
             try{
                 tx = session.beginTransaction();
-                session.update(order);
+                session.update(orderDTO);
                 tx.commit();
 
             } catch(RuntimeException ex){

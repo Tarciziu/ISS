@@ -52,7 +52,7 @@
                               <Font size="19.0" />
                            </font>
                         </Label>
-                        <Button fx:id="modifyButton" layoutX="406.0" layoutY="23.0" mnemonicParsing="false" text="Modify order" />
+                        <Button fx:id="modifyButton" onAction="#handleModifyButton" layoutX="406.0" layoutY="23.0" mnemonicParsing="false" text="Modify order" />
                      </children>
                   </AnchorPane>
             </content>

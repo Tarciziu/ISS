@@ -11,6 +11,8 @@ import model.Order;
 import model.Product;
 import services.IService;
 
+import javax.swing.*;
+
 public class OrderWindowController {
     private IService service;
     private Product product;
@@ -26,7 +28,7 @@ public class OrderWindowController {
 
     @FXML
     private void initialize() {
-        var factory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, 1);
+        var factory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 15, 1);
         factory.setWrapAround(true);
 
         numberSpinner.setValueFactory(factory);
@@ -46,10 +48,14 @@ public class OrderWindowController {
     }
 
     public void handlePlaceOrder(ActionEvent actionEvent) {
-        if(buyerTextField.getText().toString().length()>0) {
-            Order order = new Order(this.product, numberSpinner.getValue(), buyerTextField.getText());
-            service.addOrder(order);
-        }
+        if(buyerTextField.getText().toString().length()>0)
+            if(product.getQuantity() >= numberSpinner.getValue()){
+                Order order = new Order(this.product, numberSpinner.getValue(), buyerTextField.getText());
+                service.addOrder(order);
+            }
+            else
+                JOptionPane.showMessageDialog(null, "Quantity of product unavailable",
+                        "Info", JOptionPane.INFORMATION_MESSAGE);
         Stage stage = (Stage) buyerTextField.getScene().getWindow();
         stage.close();
     }

@@ -10,4 +10,5 @@ public interface IService {
     Iterable<Product> findAllProducts();
     Iterable<Order> findAllOrders();
     void addOrder(Order order);
+    void updateOrder(Order order);
 }

@@ -123,7 +123,31 @@ public class MainWindowController extends UnicastRemoteObject implements Seriali
                 modelProduct.get(i).setQuantity(order.getProduct().getQuantity());
         }
         tableProducts.refresh();
-        modelOrder.add(order);
+        Boolean ok = false;
+        for(int i=0;i<modelOrder.size();i++)
+            if(modelOrder.get(i).getId().equals(order.getId())){
+                modelOrder.get(i).setQuantity(order.getQuantity());
+                modelOrder.get(i).setProduct(order.getProduct());
+                modelOrder.get(i).setBuyer(order.getBuyer());
+                ok = true;
+            }
+        if(!ok)
+            modelOrder.add(order);
         tableOrders.refresh();
+    }
+
+    public void handleModifyButton(ActionEvent actionEvent) throws IOException {
+        Order order = tableOrders.getSelectionModel().getSelectedItem();
+        if(order != null){
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/gui/modifyOrderWindow.fxml"));
+            Scene orderScene = new Scene(loader.load());
+            Stage stage = new Stage();
+            stage.setScene(orderScene);
+            stage.show();
+            ModifyOrderWindowController orderController = loader.getController();
+            orderController.setService(service);
+            orderController.setOrder(order);
+        }
     }
 }
