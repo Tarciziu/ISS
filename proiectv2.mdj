@@ -390,7 +390,7 @@
 									"font": "Arial;13;0",
 									"left": 405.5,
 									"top": 220.5,
-									"width": 140,
+									"width": 141.21875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF4PuUmvLjyZyU="
@@ -600,7 +600,7 @@
 									"font": "Arial;13;0",
 									"left": 343,
 									"top": 364.5,
-									"width": 109,
+									"width": 109.708984375,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF4PuWgeLkgbnA="
@@ -810,7 +810,7 @@
 									"font": "Arial;13;0",
 									"left": 347,
 									"top": 108.5,
-									"width": 90,
+									"width": 90.89453125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF4PuYhKLlRCuI="
@@ -8080,57 +8080,6 @@
 									"subViews": [
 										{
 											"_type": "UMLAttributeView",
-											"_id": "AAAAAAF5yTH0IlxBDaE=",
-											"_parent": {
-												"$ref": "AAAAAAF5ySMCzvC64cI="
-											},
-											"model": {
-												"$ref": "AAAAAAF5yTH0E1w7eXg="
-											},
-											"font": "Arial;13;0",
-											"left": 477,
-											"top": 702,
-											"width": 233.009765625,
-											"height": 13,
-											"text": "+userRepository: IUserRepository",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLAttributeView",
-											"_id": "AAAAAAF5yTI8G12nwQ0=",
-											"_parent": {
-												"$ref": "AAAAAAF5ySMCzvC64cI="
-											},
-											"model": {
-												"$ref": "AAAAAAF5yTI8DV2hFks="
-											},
-											"font": "Arial;13;0",
-											"left": 477,
-											"top": 717,
-											"width": 233.009765625,
-											"height": 13,
-											"text": "+productRepository: IProductRepository",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLAttributeView",
-											"_id": "AAAAAAF5yTJ3EV8NW20=",
-											"_parent": {
-												"$ref": "AAAAAAF5ySMCzvC64cI="
-											},
-											"model": {
-												"$ref": "AAAAAAF5yTJ3Al8HnCc="
-											},
-											"font": "Arial;13;0",
-											"left": 477,
-											"top": 732,
-											"width": 233.009765625,
-											"height": 13,
-											"text": "+orderRepository: IOrderRepository",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLAttributeView",
 											"_id": "AAAAAAF5yTLPaGBzg2U=",
 											"_parent": {
 												"$ref": "AAAAAAF5ySMCzvC64cI="
@@ -8140,7 +8089,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 477,
-											"top": 747,
+											"top": 702,
 											"width": 233.009765625,
 											"height": 13,
 											"text": "+loggedClients: Map",
@@ -8151,7 +8100,7 @@
 									"left": 472,
 									"top": 697,
 									"width": 243.009765625,
-									"height": 68
+									"height": 23
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -8174,7 +8123,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 477,
-											"top": 770,
+											"top": 725,
 											"width": 233.009765625,
 											"height": 13,
 											"text": "+findAllProducts()",
@@ -8191,7 +8140,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 477,
-											"top": 785,
+											"top": 740,
 											"width": 233.009765625,
 											"height": 13,
 											"text": "+findAllOrders()",
@@ -8208,7 +8157,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 477,
-											"top": 800,
+											"top": 755,
 											"width": 233.009765625,
 											"height": 13,
 											"text": "+addOrder(order: Order)",
@@ -8225,7 +8174,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 477,
-											"top": 815,
+											"top": 770,
 											"width": 233.009765625,
 											"height": 13,
 											"text": "+login(user: User, observer: IObserver)",
@@ -8242,7 +8191,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 477,
-											"top": 830,
+											"top": 785,
 											"width": 233.009765625,
 											"height": 13,
 											"text": "+logout(user: User, observer: IObserver)",
@@ -8251,7 +8200,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 472,
-									"top": 765,
+									"top": 720,
 									"width": 243.009765625,
 									"height": 83
 								},
@@ -16156,9 +16105,9 @@
 														"$ref": "AAAAAAF5Fyb6D6WuRyo="
 													},
 													"font": "Arial;13;0",
-													"left": 22.55908203125,
+													"left": 24.72998046875,
 													"top": 5,
-													"width": 48.6708984375,
+													"width": 50.8671875,
 													"height": 13,
 													"text": "LoginSD"
 												},
@@ -16171,7 +16120,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 12.55908203125,
+													"width": 14.72998046875,
 													"height": 13,
 													"text": "sd"
 												}
@@ -19425,9 +19374,9 @@
 														"$ref": "AAAAAAF5whQnrAUdzI4="
 													},
 													"font": "Arial;13;0",
-													"left": 22.55908203125,
+													"left": 24.72998046875,
 													"top": 5,
-													"width": 50.11181640625,
+													"width": 51.58447265625,
 													"height": 13,
 													"text": "LoginCD"
 												},
@@ -19440,7 +19389,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 12.55908203125,
+													"width": 14.72998046875,
 													"height": 13,
 													"text": "sd"
 												}
@@ -29462,9 +29411,9 @@
 														"$ref": "AAAAAAF5yP5Im3/gr8M="
 													},
 													"font": "Arial;13;0",
-													"left": 22.55908203125,
+													"left": 24.72998046875,
 													"top": 5,
-													"width": 122.3291015625,
+													"width": 130.32080078125,
 													"height": 13,
 													"text": "viewListOfProductsSD"
 												},
@@ -29477,7 +29426,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 12.55908203125,
+													"width": 14.72998046875,
 													"height": 13,
 													"text": "sd"
 												}
@@ -34009,9 +33958,9 @@
 														"$ref": "AAAAAAF5yQQ+bI1bDjY="
 													},
 													"font": "Arial;13;0",
-													"left": 22.55908203125,
+													"left": 24.72998046875,
 													"top": 5,
-													"width": 123.77001953125,
+													"width": 131.0380859375,
 													"height": 13,
 													"text": "viewListOfProductsCD"
 												},
@@ -34024,7 +33973,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 12.55908203125,
+													"width": 14.72998046875,
 													"height": 13,
 													"text": "sd"
 												}
@@ -46052,9 +46001,9 @@
 														"$ref": "AAAAAAF5yRCC0xnCrsE="
 													},
 													"font": "Arial;13;0",
-													"left": 22.55908203125,
+													"left": 24.72998046875,
 													"top": 5,
-													"width": 75.3564453125,
+													"width": 83.3671875,
 													"height": 13,
 													"text": "placeOrderSD"
 												},
@@ -46067,7 +46016,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 12.55908203125,
+													"width": 14.72998046875,
 													"height": 13,
 													"text": "sd"
 												}
@@ -50975,9 +50924,9 @@
 														"$ref": "AAAAAAF5yRVImCJY/6c="
 													},
 													"font": "Arial;13;0",
-													"left": 22.55908203125,
+													"left": 24.72998046875,
 													"top": 5,
-													"width": 76.79736328125,
+													"width": 84.08447265625,
 													"height": 13,
 													"text": "placeOrderCD"
 												},
@@ -50990,7 +50939,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 12.55908203125,
+													"width": 14.72998046875,
 													"height": 13,
 													"text": "sd"
 												}
@@ -64104,9 +64053,9 @@
 														"$ref": "AAAAAAF5yRhIkW90WJA="
 													},
 													"font": "Arial;13;0",
-													"left": 22.55908203125,
+													"left": 24.72998046875,
 													"top": 5,
-													"width": 85.4873046875,
+													"width": 90.578125,
 													"height": 13,
 													"text": "modifyOrderSD"
 												},
@@ -64119,7 +64068,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 12.55908203125,
+													"width": 14.72998046875,
 													"height": 13,
 													"text": "sd"
 												}
@@ -69026,9 +68975,9 @@
 														"$ref": "AAAAAAF5yRqR5Xq65M8="
 													},
 													"font": "Arial;13;0",
-													"left": 54.55908203125,
+													"left": 56.72998046875,
 													"top": 5,
-													"width": 86.92822265625,
+													"width": 91.29541015625,
 													"height": 13,
 													"text": "modifyOrderCD"
 												},
@@ -69041,7 +68990,7 @@
 													"font": "Arial;13;1",
 													"left": 37,
 													"top": 5,
-													"width": 12.55908203125,
+													"width": 14.72998046875,
 													"height": 13,
 													"text": "sd"
 												}
@@ -82500,33 +82449,6 @@
 						}
 					],
 					"attributes": [
-						{
-							"_type": "UMLAttribute",
-							"_id": "AAAAAAF5yTH0E1w7eXg=",
-							"_parent": {
-								"$ref": "AAAAAAF5ySMCzfCyV60="
-							},
-							"name": "userRepository",
-							"type": "IUserRepository"
-						},
-						{
-							"_type": "UMLAttribute",
-							"_id": "AAAAAAF5yTI8DV2hFks=",
-							"_parent": {
-								"$ref": "AAAAAAF5ySMCzfCyV60="
-							},
-							"name": "productRepository",
-							"type": "IProductRepository"
-						},
-						{
-							"_type": "UMLAttribute",
-							"_id": "AAAAAAF5yTJ3Al8HnCc=",
-							"_parent": {
-								"$ref": "AAAAAAF5ySMCzfCyV60="
-							},
-							"name": "orderRepository",
-							"type": "IOrderRepository"
-						},
 						{
 							"_type": "UMLAttribute",
 							"_id": "AAAAAAF5yTLPWGBtrPg=",
